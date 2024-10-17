@@ -38,7 +38,7 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
       toast({
         title: response.data.message,
       });
-      onMessageDelete(message._id.toString());
+      onMessageDelete(message._id);
 
     } catch (error) {
       const axiosError = error as AxiosError<ApiResponse>;
